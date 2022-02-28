@@ -10,7 +10,6 @@ html body {
   min-width: 368px;
   height: 100%;
   font-family: "Poppins", sans-serif;
-  margin: 0 24px;
 }
 
 .maincontainer {
@@ -28,7 +27,8 @@ html body {
   background: #fff;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .nav-list {
@@ -124,22 +124,33 @@ li {
 /* Grid container */
 
 .grid-position {
+  /* background: #000; */
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 180px;
   align-items: center;
 }
 
-.Grid-container {
+.grid-container {
   display: grid;
-  width: 375px;
+  width: 100%;
   grid-template-columns: auto;
-  background: #e5e5e5;
+
+  /* background: #e5e5e5; */
   row-gap: 114px;
   border-radius: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* First part */
+
+.GridCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .second-section {
   display: block;
@@ -257,14 +268,23 @@ li {
 button {
   font-weight: 500;
   letter-spacing: 0.03rem;
-  margin: 12px 0;
+
+  /* margin: 12px 0; */
   background-color: #fff;
   border: 1px;
   color: #6070ff;
   font-size: 17px;
+  height: 40px;
+  border-radius: 8px;
 }
 
 /* Second part */
+
+.GridCard2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .second-section2 {
   display: block;
@@ -348,6 +368,12 @@ button {
 }
 
 /* This is the third part */
+
+.GridCard3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .second-section3 {
   display: block;
@@ -531,11 +557,14 @@ button:active {
   transform: translateY(4px);
 }
 
-.footer {
-  background-color: #fff;
-}
-
 /* About myself */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .last {
   width: 375px;
@@ -628,7 +657,6 @@ h4 {
 }
 
 .GridWrapperlst {
-  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -689,7 +717,7 @@ textarea {
 }
 
 .MyBtn {
-  width: 75%;
+  /* width: 75%; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -710,6 +738,19 @@ textarea {
   align-items: center;
   flex-direction: column;
   margin-right: 25px;
+}
+
+.click53 {
+  border: 1px solid #6070ff;
+  color: white;
+  border-radius: 5px;
+  font-family: 'poppins', sans-serif;
+  font-size: 20px;
+  margin-top: 18px;
+
+  /* max-width: 45%; */
+
+  /* text-align: center; */
 }
 
 @media screen and (min-width: 1050px) {

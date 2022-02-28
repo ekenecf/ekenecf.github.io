@@ -739,7 +739,6 @@ textarea {
     width: 100%;
     background-color: #fff;
     display: flex;
-    /* padding-top: 15px; */
     padding-bottom: 10px;
     justify-content: space-between;
     position: fixed;

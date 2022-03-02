@@ -560,6 +560,7 @@ button:active {
 /* About myself */
 
 .footer {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1195,6 +1196,7 @@ textarea {
     width: 100%;
     height: 100%;
     padding: 20px;
+    background: #fff;
   }
 
   .GridCard51a {

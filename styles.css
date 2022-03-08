@@ -50,19 +50,46 @@ html body {
   position: inherit;
 }
 
-
-.nav-list li{
- list-style-type: none;
+a:hover {
+  color: green;
 }
 
-.nav-list li a{
+li {
+  margin: 15px;
+  margin-left: 0;
+}
+
+.nav-list li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #6070ff;
+  margin-left: 10px;
+}
+
+.list a {
+  background-color: #ebebff;
+  padding: 5px 10px;
+  border-radius: 11px;
+  font-size: 12px;
+}
+
+.nav-list li a {
   width: 100%;
 }
 
 .toggle {
   width: 100%;
   position: absolute;
-  top: 100%; left: 0; right: 0;
+  top: 100%;
+  left: 0;
+  right: 0;
   background-color: white;
   display: none;
 }
@@ -72,7 +99,7 @@ html body {
   padding-inline: 10%;
 }
 
-.toggle.active{
+.toggle.active {
   display: flex;
   height: 85vh;
   background: rgb(176, 176, 201);
@@ -86,20 +113,6 @@ html body {
 
 .menu.hidden {
   display: none;
-}
-
-a {
-  text-decoration: none;
-  font-style: normal;
-  font-family: "poppins", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  color: #6070ff;
-  margin-left: 10px;
-}
-
-a:hover {
-  color: green;
 }
 
 .first-section {
@@ -161,11 +174,6 @@ p.second-paragraph {
   width: 15px;
 }
 
-li {
-  margin: 15px;
-  margin-left: 0;
-}
-
 /* Grid container */
 
 .grid-position {
@@ -205,7 +213,6 @@ li {
   padding-inline: 16px;
   width: 327px;
   height: 552px;
-
 }
 
 .second-section img {
@@ -278,13 +285,6 @@ li {
 .list {
   padding-top: 3px;
   margin: 0 10px 0 0;
-}
-
-.list a {
-  background-color: #ebebff;
-  padding: 5px 10px;
-  border-radius: 11px;
-  font-size: 12px;
 }
 
 .works {
@@ -823,9 +823,7 @@ textarea {
     width: 100%;
     background-color: #fff;
     display: flex;
-    /* padding-bottom: 10px; */
     justify-content: space-between;
-    /* position: fixed; */
   }
 
   .nav-list {

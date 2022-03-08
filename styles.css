@@ -107,7 +107,7 @@ li {
 .toggle.active {
   display: flex;
   height: 85vh;
-  background: #6070FF;
+  background: #6070ff;
 }
 
 .menu {

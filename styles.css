@@ -50,6 +50,16 @@ html body {
   position: inherit;
 }
 
+a {
+  text-decoration: none;
+  font-style: normal;
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #6070ff;
+  margin-left: 10px;
+}
+
 a:hover {
   color: green;
 }
@@ -61,16 +71,6 @@ li {
 
 .nav-list li {
   list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  font-style: normal;
-  font-family: "poppins", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  color: #6070ff;
-  margin-left: 10px;
 }
 
 .list a {

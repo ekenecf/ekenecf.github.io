@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=305216974"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=305216974"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script>
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,12 +32,15 @@
                 <a href="">WELCOME</a>
                 <nav class="toggle">
                     <ul class="nav-list">
-                        <li> <a href="#">Portfolio</a> </li>
-                        <li> <a href="#">About</a> </li>
-                        <li> <a href="#">Contact</a> </li>
+                        <li class="link"> <a href="#portfolio">Portfolio</a></li>
+                        <li class="link"> <a href="#About">About</a></li>
+                        <li class="link"> <a href="#contact">Contact</a> </li>
                     </ul>
-                    <button class="menu"><i class="fa-solid fa-bars"></i></button>
                 </nav>
+                <div class="hamburger">
+                    <button class="close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <button class="menu"><i class="fa-solid fa-bars"></i></button>
             </div>
         </header>
 
@@ -68,7 +71,7 @@
             <div class="grid-container">
                 <section class="GridCard">
                     <section class="GridWrapper">
-                        <section class="second-section">
+                        <section class="second-section" id="portfolio">
                             <div class="images">
                                 <img src="./images/Snapshoot-Portfolio-(3).jpg" alt="section-eader" class="img1"><img
                                     src="./images/Snapshoot-Portfolio.jpg" alt="img" class="img2">
@@ -248,7 +251,7 @@
                     <!-- About myself -->
                     <footer class="GridCard51a">
                         <section class="GridWrapper51a">
-                            <section class="last">
+                            <section class="last" id="About">
                                 <div>
                                     <h2>About <br> Myself</h2>
                                     <p>Hello, I'm a software developer! I can help you build a product, feature or
@@ -297,7 +300,7 @@
                         </section>
                     </footer>
                     <footer class="GridCardlst">
-                        <section class="GridWrapperlst">
+                        <section class="GridWrapperlst" id="contact">
                             <h2>Contact me</h2>
                             <p>
                                 If you have an application you're interested in developing,
@@ -338,6 +341,7 @@
             </div>
         </div>
     </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>

@@ -32,16 +32,60 @@ html body {
 }
 
 .nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  right: 5%;
   display: none;
+  margin-right: 23px;
+}
+
+.close.show {
+  display: block;
+  position: inherit;
+}
+
+
+.nav-list li{
+ list-style-type: none;
+}
+
+.nav-list li a{
+  width: 100%;
 }
 
 .toggle {
-  margin-right: 20px;
+  width: 100%;
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  background-color: white;
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  padding-inline: 10%;
+}
+
+.toggle.active{
+  display: flex;
+  height: 85vh;
+  background: rgb(176, 176, 201);
 }
 
 .menu {
   border: none;
   color: #6070ff;
+  margin-right: 16%;
+}
+
+.menu.hidden {
+  display: none;
 }
 
 a {
@@ -65,6 +109,7 @@ a:hover {
   align-items: center;
   width: 375px;
   background: #fff;
+  padding: 10px;
 }
 
 .section2 {
@@ -124,7 +169,6 @@ li {
 /* Grid container */
 
 .grid-position {
-  /* background: #000; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -136,8 +180,6 @@ li {
   display: grid;
   width: 100%;
   grid-template-columns: auto;
-
-  /* background: #e5e5e5; */
   row-gap: 114px;
   border-radius: 20px;
   justify-content: center;
@@ -163,12 +205,14 @@ li {
   padding-inline: 16px;
   width: 327px;
   height: 552px;
+
 }
 
 .second-section img {
   width: 295px;
   height: 220px;
   margin-top: 16px;
+  padding: 14px;
 }
 
 .second-section img.img2 {
@@ -766,13 +810,22 @@ textarea {
     width: 100%;
   }
 
+  .toggle {
+    display: flex;
+    position: initial;
+  }
+
+  .toggle a {
+    border: none;
+  }
+
   .navigation {
     width: 100%;
     background-color: #fff;
     display: flex;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     justify-content: space-between;
-    position: fixed;
+    /* position: fixed; */
   }
 
   .nav-list {
@@ -784,6 +837,9 @@ textarea {
     font-size: 15px;
     color: #344563;
     margin-right: 15px;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
   }
 
   .nav-list li {
@@ -813,9 +869,14 @@ textarea {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 15px;
+    text-decoration: none;
   }
 
   .menu {
+    display: none;
+  }
+
+  .close {
     display: none;
   }
 

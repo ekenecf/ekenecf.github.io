@@ -23,6 +23,7 @@ html body {
 
 header {
   display: flex;
+  justify-content: center;
 }
 
 .navigation {
@@ -32,7 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
 }
 
 .nav-list {
@@ -106,7 +107,7 @@ li {
 .toggle.active {
   top: 0%;
   display: flex;
-  height: 100vh;
+  height: 128vh;
   background: #6070ff;
 }
 

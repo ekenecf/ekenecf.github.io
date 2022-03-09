@@ -40,6 +40,7 @@ header {
   display: flex;
   flex-direction: column;
   padding-inline: 20px;
+  padding-top: 20px;
 }
 
 .close {
@@ -51,7 +52,9 @@ header {
 
 .close.show {
   display: block;
-  position: inherit;
+  background: #6070ff;
+  color: white;
+  cursor: pointer;
 }
 
 a {
@@ -92,21 +95,18 @@ li {
 .toggle {
   width: 100%;
   position: absolute;
-  top: 100%;
   left: 0;
   right: 0;
-  background-color: white;
+  transform: none;
+  transition-delay: 0.2s;
+  opacity: 0.8;
   display: none;
 }
 
-.hamburger {
-  display: flex;
-  padding-inline: 10%;
-}
-
 .toggle.active {
+  top: 0%;
   display: flex;
-  height: 85vh;
+  height: 100vh;
   background: #6070ff;
 }
 
@@ -114,6 +114,7 @@ li {
   border: none;
   color: #6070ff;
   margin-right: 16%;
+  cursor: pointer;
 }
 
 .menu.hidden {
@@ -798,12 +799,10 @@ textarea {
   font-size: 20px;
   margin-top: 18px;
 
-  /* max-width: 45%; */
-
   /* text-align: center; */
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 992px) {
   html body {
     min-width: 368px;
     height: 100%;
@@ -817,7 +816,7 @@ textarea {
 
   .toggle {
     display: flex;
-    position: initial;
+    /* position: initial; */
   }
 
   .toggle a {
@@ -845,6 +844,13 @@ textarea {
     gap: 20px;
   }
 
+  .hamburger {
+    display: none;
+  }
+  .toggle.active {
+    display: none;
+  }
+
   .nav-list li {
     transform: scale(1.1);
   }
@@ -860,6 +866,11 @@ textarea {
   .to-do ul li {
     color: #344563;
     font-weight: normal;
+  }
+
+  .nav-list li a {
+    width: 100%;
+    color: #344563;
   }
 
   .nav-list li:hover {

@@ -3,7 +3,6 @@ let toggle = document.querySelector('.toggle');
 let cls = document.querySelector('.close')
 let links = document.querySelector('.link')
 
-
 function pop() {
   toggle.classList.add('active');
   Hamb.classList.add('hidden');

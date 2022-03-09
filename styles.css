@@ -846,6 +846,7 @@ textarea {
   .hamburger {
     display: none;
   }
+
   .toggle.active {
     display: none;
   }
@@ -866,11 +867,11 @@ textarea {
     color: #344563;
     font-weight: normal;
   }
-  
+
   .list a {
     margin: 0;
   }
-  
+
   .nav-list a {
     color: #344563;
     font-family: 'Poppins', sans-serif;
@@ -878,14 +879,14 @@ textarea {
     font-size: 15px;
     text-decoration: none;
   }
-  
+
   .ruby a {
     background-color: #ebebff;
     padding: 5px 10px;
     border-radius: 11px;
     font-size: 12px;
   }
-  
+
   .ruby2 a {
     background-color: #ebebff;
     padding: 5px 10px;

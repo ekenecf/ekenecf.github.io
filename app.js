@@ -1,7 +1,7 @@
 const Hamb = document.querySelector('.menu');
 const toggle = document.querySelector('.toggle');
-const cls = document.querySelector('.close')
-let links = document.querySelector('.link')
+const cls = document.querySelector('.close');
+const links = document.querySelector('.link');
 
 function pop() {
   toggle.classList.add('active');
@@ -21,5 +21,4 @@ cls.addEventListener('click', popout);
 
 links.forEach((link) => {
   link.addEventListener('click', popout);
-})
-
+});

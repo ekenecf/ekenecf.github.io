@@ -1,6 +1,6 @@
-let Hamb = document.querySelector('.menu');
-let toggle = document.querySelector('.toggle');
-let cls = document.querySelector('.close')
+const Hamb = document.querySelector('.menu');
+const toggle = document.querySelector('.toggle');
+const cls = document.querySelector('.close')
 let links = document.querySelector('.link')
 
 function pop() {

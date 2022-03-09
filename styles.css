@@ -816,7 +816,6 @@ textarea {
 
   .toggle {
     display: flex;
-    /* position: initial; */
   }
 
   .toggle a {
@@ -867,6 +866,32 @@ textarea {
     color: #344563;
     font-weight: normal;
   }
+  
+  .list a {
+    margin: 0;
+  }
+  
+  .nav-list a {
+    color: #344563;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  
+  .ruby a {
+    background-color: #ebebff;
+    padding: 5px 10px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
+  
+  .ruby2 a {
+    background-color: #ebebff;
+    padding: 5px 10px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
 
   .nav-list li a {
     width: 100%;
@@ -876,14 +901,6 @@ textarea {
   .nav-list li:hover {
     transform: scale(1.5);
     transition: all 350ms;
-  }
-
-  .nav-list a {
-    color: #344563;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    text-decoration: none;
   }
 
   .menu {
@@ -1005,10 +1022,6 @@ textarea {
     font-size: 18px;
   }
 
-  .list a {
-    margin: 0;
-  }
-
   .click {
     width: 36%;
   }
@@ -1092,13 +1105,6 @@ textarea {
   .ruby {
     padding-top: 3px;
     margin: 0 10px 0 0;
-  }
-
-  .ruby a {
-    background-color: #ebebff;
-    padding: 5px 10px;
-    border-radius: 11px;
-    font-size: 12px;
   }
 
   .works2 .ruby {
@@ -1195,13 +1201,6 @@ textarea {
     display: block;
     font-size: 18px;
     font-weight: normal;
-  }
-
-  .ruby2 a {
-    background-color: #ebebff;
-    padding: 5px 10px;
-    border-radius: 11px;
-    font-size: 12px;
   }
 
   img.cursor1 {

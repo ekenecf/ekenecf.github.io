@@ -1,12 +1,9 @@
-submit.addEventListener('click', validate);
+
 function validate(e) {
   e.preventDefault();
-
   const userName = document.getElementById('name');
   const mail = document.getElementById('mail');
   const msg = document.getElementById('msg');
-
- 
   if (!userName.value) {
     userName.classList.toggle('view');
   } else if (!mail.value) {
@@ -17,3 +14,4 @@ function validate(e) {
     window.location = './newpage.html';
   }
 }
+submit.addEventListener('click', validate);

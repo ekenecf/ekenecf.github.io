@@ -1,4 +1,3 @@
-
 function validate(e) {
   e.preventDefault();
   const userName = document.getElementById('name');
@@ -14,4 +13,5 @@ function validate(e) {
     window.location = './newpage.html';
   }
 }
+const submit = document.getElementById('submit')
 submit.addEventListener('click', validate);

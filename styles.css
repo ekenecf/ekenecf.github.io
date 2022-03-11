@@ -917,7 +917,11 @@ li.tag {
   width: 100%;
 }
 
-input.view{
+input.view {
+  border: 2px solid red;
+}
+
+textarea.view{
   border: 2px solid red;
 }
 

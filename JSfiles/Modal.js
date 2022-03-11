@@ -58,7 +58,7 @@ const Arrayprojects = [
 
 function createModal() {
   for (let i = 0; i < viewBtn.length; i += 1) { 
-    function event() {
+    let event = function event() {
       Modalh.innerHTML = Arrayprojects[i].title;
       Modalrole.innerHTML = Arrayprojects[i].role;
       Modalyear.innerHTML = Arrayprojects[i].year;
@@ -70,8 +70,8 @@ function createModal() {
         ModalWorks.innerHTML = `${ModalWorks.innerHTML}<li class="tag">${Arrayprojects[i].tags[j]}</li>`;
       }
       Modalcontainer.classList.toggle('vanish');
-    };
-    viewBtn[i].addEventListener('click', (event))
+    }
+    viewBtn[i].addEventListener('click', (event));
   }
 }
 createModal();

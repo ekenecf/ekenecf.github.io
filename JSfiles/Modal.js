@@ -57,24 +57,23 @@ const Arrayprojects = [
 ];
 
 function createModal() {
-
-  for (let i = 0; i < viewBtn.length; i++) {
+  for (let i = 0; i < viewBtn.length; i+=1) {
     viewBtn[i].addEventListener('click', (event) => {
       Modalh.innerHTML = Arrayprojects[i].title;
       Modalrole.innerHTML = Arrayprojects[i].role;
       Modalyear.innerHTML = Arrayprojects[i].year;
       Modalpara.innerHTML = Arrayprojects[i].description;
       ModalImg.src = Arrayprojects[i].imageLink;
-      Modalcan.innerHTML = Arrayprojects[i].company
+      Modalcan.innerHTML = Arrayprojects[i].company;
       ModalWorks.innerHTML = '';
-      for (let j = 0; j < Arrayprojects[i].tags.length; j++) {
+      for (let j = 0; j < Arrayprojects[i].tags.length; j+=1) {
         ModalWorks.innerHTML = `${ModalWorks.innerHTML}<li class="tag">${Arrayprojects[i].tags[j]}</li>`;
       }
       Modalcontainer.classList.toggle('vanish');
     });
   }
 };
-createModal();
+createModal()
 
 function close() {
   Modalcontainer.classList.toggle('vanish');

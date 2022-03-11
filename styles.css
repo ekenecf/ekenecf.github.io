@@ -769,7 +769,6 @@ textarea {
 }
 
 .MyBtn {
-  /* width: 75%; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -799,8 +798,123 @@ textarea {
   font-family: 'poppins', sans-serif;
   font-size: 20px;
   margin-top: 18px;
+}
 
-  /* text-align: center; */
+/* Modal part */
+
+.vanish {
+  display: none;
+}
+
+.Modalcont {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Modalcan {
+  color: #172b4d;
+  font-weight: 600;
+}
+
+.Modalhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding-inline: 15px;
+}
+
+.cross {
+  font-size: 40px;
+  cursor: pointer;
+  color: #67798e;
+}
+
+.Modallang {
+  display: flex;
+  align-items: center;
+  width: 81%;
+  justify-content: flex-start;
+}
+
+.Modallist {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  color: #344563;
+  margin-left: 18px;
+  font-size: 10px;
+}
+
+.Modalpara {
+  color: #344563;
+  margin-top: 15px;
+  padding-right: 22px;
+  padding-inline: 22px;
+}
+
+.ModalWorks {
+  display: flex;
+  list-style-type: none;
+}
+
+.ModalWorks2 {
+  display: none;
+}
+
+li.tag {
+  color: #6070ff;
+  background-color: #ebebff;
+  border-radius: 8px;
+}
+
+.Modalimage {
+  width: 80%;
+}
+
+.Modalwp {
+  width: 90%;
+  margin-bottom: 10%;
+}
+
+.Modalw {
+  margin-left: 20px;
+}
+
+.Modalcontainer {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-inline: 5%;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation-name: ekene;
+  animation-duration: 1s;
+}
+
+@keyframes ekene {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.Modalbuttons {
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.Modalbtn1 {
+  border: 1px solid blue;
+  width: 100%;
 }
 
 @media screen and (min-width: 992px) {
@@ -828,6 +942,7 @@ textarea {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
+    height: 45px;
   }
 
   .nav-list {
@@ -842,6 +957,7 @@ textarea {
     flex-direction: row;
     justify-content: flex-end;
     gap: 20px;
+    padding-top: 0;
   }
 
   .hamburger {
@@ -1381,5 +1497,57 @@ textarea {
   .click52:hover {
     transform: scale(1.5);
     transition: all 350ms;
+  }
+
+  .Modalhead {
+    width: 83%;
+    margin: 0;
+  }
+
+  .Modalh {
+    font-size: 35px;
+  }
+
+  .cross {
+    font-size: 50px;
+  }
+
+  .Modallist {
+    width: 30%;
+    font-size: 16px;
+  }
+
+  .ModalImg {
+    width: 100%;
+  }
+
+  .Modallang {
+    width: 79%;
+  }
+
+  .Modalpara {
+    width: 55%;
+    margin-left: 25px;
+  }
+
+  .Modalwp {
+    display: flex;
+  }
+
+  .Modalbuttons {
+    width: 100%;
+  }
+
+  .Modalbtn1 {
+    width: 100%;
+  }
+
+  .Modalw {
+    width: 35%;
+  }
+
+  .ModalWorks2 {
+    display: flex;
+    list-style-type: none;
   }
 }

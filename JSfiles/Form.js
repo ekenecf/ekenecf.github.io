@@ -13,5 +13,5 @@ function validate(e) {
     window.location = './newpage.html';
   }
 }
-const submit = document.getElementById('submit')
+const submit = document.getElementById('submit');
 submit.addEventListener('click', validate);

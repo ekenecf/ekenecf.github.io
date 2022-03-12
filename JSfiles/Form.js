@@ -6,10 +6,10 @@ function validate(e) {
   if (email.value !== email.value.toLowerCase()) {
     const err = document.querySelector('.err');
     err.classList.toggle('show');
-
   } else if (email.value === email.value.toLowerCase()) {
     const suc = document.querySelector('.suc');
     suc.classList.toggle('visible');
   }
 }
-  submit.addEventListener('click', validate);
+submit.addEventListener('click', validate);
+const submit = document.getElementById('submit');

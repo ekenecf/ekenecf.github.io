@@ -1,5 +1,4 @@
-function validate(e) {
-
+function validate() {
   const email = document.getElementById('mail');
 
   if (email.value !== email.value.toLowerCase()) {

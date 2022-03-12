@@ -5,7 +5,7 @@ function validate(e) {
   const msg = document.getElementById('msg');
   if (!userName.value) {
     userName.classList.toggle('view');
-  } else if (!mail.value) {
+  } else if (!mail.value) {b
     mail.classList.toggle('view');
   } else if (!msg.value) {
     msg.classList.toggle('view');

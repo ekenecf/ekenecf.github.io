@@ -1283,11 +1283,30 @@ textarea.view {
   }
 
   .second-section3 img.img1 {
-    display: none;
+    display: block;
+    height: 55vh;
+    width: 100%;
   }
 
   h2.mobile-ton {
-    display: none;
+    display: block;
+  }
+
+  .to-do3 {
+    display: flex;
+
+  }
+
+  .to-do3 .back-end {
+    display: inline-block
+  }
+
+  .to-do3 .year {
+    display: inline-block
+  }
+
+  .to-do3 .canopy{
+    display: inline-block;
   }
 
   h2.mob-face {
@@ -1296,24 +1315,18 @@ textarea.view {
 
   .click24 {
     width: 25%;
-    background: #4053fc;
+    /* background: #4053fc; */
     border-radius: 5px;
     font-family: "poppins", sans-serif;
     font-size: 20px;
     text-align: center;
   }
 
-  button {
+  .prj-view-btn {
     background-color: white;
     color: #6070ff;
   }
-
-  .works ul {
-    display: flex;
-    list-style-type: none;
-    margin-bottom: 40px;
-  }
-
+  
   .ruby2 {
     padding-top: 3px;
     margin: 0 10px 0 0;

@@ -828,7 +828,7 @@ p.err {
   color: rgb(241, 7, 7);
 }
 
-p.err.show{
+p.err.show {
   display: block;
 }
 
@@ -1318,18 +1318,17 @@ li.tag {
 
   .to-do3 {
     display: flex;
-
   }
 
   .to-do3 .back-end {
-    display: inline-block
+    display: inline-block;
   }
 
   .to-do3 .year {
-    display: inline-block
+    display: inline-block;
   }
 
-  .to-do3 .canopy{
+  .to-do3 .canopy {
     display: inline-block;
   }
 
@@ -1339,7 +1338,6 @@ li.tag {
 
   .click24 {
     width: 25%;
-    /* background: #4053fc; */
     border-radius: 5px;
     font-family: "poppins", sans-serif;
     font-size: 20px;
@@ -1350,7 +1348,7 @@ li.tag {
     background-color: white;
     color: #6070ff;
   }
-  
+
   .ruby2 {
     padding-top: 3px;
     margin: 0 10px 0 0;
@@ -1595,28 +1593,4 @@ li.tag {
     display: flex;
     list-style-type: none;
   }
-}
-
-p.err {
-  display: none;
-  margin: 0;
-  padding: 0;
-  color: rgb(241, 7, 7);
-}
-
-p.err.show{
-  display: block;
-  /* width: 90%; */
-}
-
-p.suc {
-  display: none;
-  margin: 0;
-  width: 30%;
-  padding: 0;
-  color: rgb(151, 240, 18);
-}
-
-p.suc.visible {
-  display: block;
 }

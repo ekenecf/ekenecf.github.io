@@ -6,10 +6,8 @@ const ModalImg = document.querySelector('.ModalImg');
 const Modalpara = document.querySelector('.Modalpara');
 const ModalWorks = document.querySelector('.ModalWorks');
 const Modalcan = document.querySelector('.Modalcan');
-const viewBtn = document.querySelectorAll('.prj-view-btn');
 const cross = document.querySelector('.cross');
 const cardCover = document.querySelector('.cardCover');
-
 
 const Arrayprojects = [
   {
@@ -98,7 +96,7 @@ const Arrayprojects = [
   }
   const viewBtn = document.querySelectorAll('.prj-view-btn');
   for (let i = 0; i < viewBtn.length; i += 1) {
-    viewBtn[i].addEventListener('click', (event) => {
+    viewBtn[i].addEventListener('click', () => {
       Modalh.innerHTML = Arrayprojects[i].title;
       Modalrole.innerHTML = Arrayprojects[i].role;
       Modalyear.innerHTML = Arrayprojects[i].year;
@@ -117,4 +115,4 @@ const Arrayprojects = [
 function close() {
   Modalcontainer.classList.toggle('vanish');
 }
-  cross.addEventListener('click', close);
+cross.addEventListener('click', close);

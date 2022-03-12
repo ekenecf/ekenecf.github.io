@@ -11,5 +11,5 @@ function validate(e) {
     suc.classList.toggle('visible');
   }
 }
-submit.addEventListener('click', validate);
 const submit = document.getElementById('submit');
+submit.addEventListener('click', validate);

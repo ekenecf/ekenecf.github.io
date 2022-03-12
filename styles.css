@@ -805,10 +805,6 @@ textarea {
   margin-top: 18px;
 }
 
-input.view {
-  border: 2px solid red;
-}
-
 .soe {
   display: flex;
 }
@@ -821,11 +817,19 @@ p.suc {
   color: rgb(151, 240, 18);
 }
 
+p.suc.visible {
+  display: block;
+}
+
 p.err {
   display: none;
   margin: 0;
   padding: 0;
   color: rgb(241, 7, 7);
+}
+
+p.err.show{
+  display: block;
 }
 
 /* Modal part */
@@ -1591,4 +1595,28 @@ li.tag {
     display: flex;
     list-style-type: none;
   }
+}
+
+p.err {
+  display: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(241, 7, 7);
+}
+
+p.err.show{
+  display: block;
+  /* width: 90%; */
+}
+
+p.suc {
+  display: none;
+  margin: 0;
+  width: 30%;
+  padding: 0;
+  color: rgb(151, 240, 18);
+}
+
+p.suc.visible {
+  display: block;
 }

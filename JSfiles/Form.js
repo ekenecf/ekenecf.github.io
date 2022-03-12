@@ -1,10 +1,15 @@
-function validate() {
-  const mail = document.getElementById('mail');
-  if (mail.value !== mail.toLowerCase()) {
-    mail.classList.toggle('err');
-  } else {
-    mail.classList.toggle('suc');
+submit.addEventListener('click', validate);
+function validate(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('mail');
+
+    if (email.value !== email.value.toLowerCase()){
+      const err = document.querySelector('.err');
+      err.classList.toggle("show")
+      
+    } else if (email.value == email.value.toLowerCase()){
+      let suc = document.querySelector('.suc');
+      suc.classList.toggle('visible');
+    }
   }
-}
-const click = document.getElementById('submit');
-click.addEventListener('submit', validate);

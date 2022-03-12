@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=305216974"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=305216974"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script>
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,13 +31,17 @@
             <div class="navigation">
                 <a href="">WELCOME</a>
                 <nav class="toggle">
+                    <div class="hamburger">
+                        <button class="close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
                     <ul class="nav-list">
-                        <li> <a href="#">Portfolio</a> </li>
-                        <li> <a href="#">About</a> </li>
-                        <li> <a href="#">Contact</a> </li>
+                        <li> <a class="link" href="#portfolio">Portfolio</a></li>
+                        <li> <a class="link" href="#About">About</a></li>
+                        <li> <a class="link" href="#contact">Contact</a> </li>
                     </ul>
-                    <button class="menu"><i class="fa-solid fa-bars"></i></button>
                 </nav>
+
+                <button class="menu"><i class="fa-solid fa-bars"></i></button>
             </div>
         </header>
 
@@ -68,7 +72,7 @@
             <div class="grid-container">
                 <section class="GridCard">
                     <section class="GridWrapper">
-                        <section class="second-section">
+                        <section class="second-section" id="portfolio">
                             <div class="images">
                                 <img src="./images/Snapshoot-Portfolio-(3).jpg" alt="section-eader" class="img1"><img
                                     src="./images/Snapshoot-Portfolio.jpg" alt="img" class="img2">
@@ -97,7 +101,7 @@
                                     </ul>
                                 </div>
                                 <div class="click">
-                                    <button>See Projects</button>
+                                    <button class="prj-view-btn">See Projects</button>
                                 </div>
                             </div>
                         </section>
@@ -133,7 +137,7 @@
                                     </ul>
                                 </div>
                                 <div class="click2">
-                                    <button>See Projects</button>
+                                    <button class="prj-view-btn">See Projects</button>
                                 </div>
                             </div>
                             <div class="images">
@@ -183,7 +187,7 @@
                                 </div>
                                 <img src="./images/hand-cursor-1.svg" alt="cursor" class="cursor1">
                                 <div class="click24">
-                                    <button class="btn">See Projects</button>
+                                    <button class="prj-view-btn">See Projects</button>
                                 </div>
 
                             </div>
@@ -233,7 +237,7 @@
                                     </ul>
                                 </div>
                                 <div class="click51">
-                                    <button>See Projects</button>
+                                    <button class="prj-view-btn">See Projects</button>
                                 </div>
                             </div>
                             <div>
@@ -248,7 +252,7 @@
                     <!-- About myself -->
                     <footer class="GridCard51a">
                         <section class="GridWrapper51a">
-                            <section class="last">
+                            <section class="last" id="About">
                                 <div>
                                     <h2>About <br> Myself</h2>
                                     <p>Hello, I'm a software developer! I can help you build a product, feature or
@@ -297,7 +301,7 @@
                         </section>
                     </footer>
                     <footer class="GridCardlst">
-                        <section class="GridWrapperlst">
+                        <section class="GridWrapperlst" id="contact">
                             <h2>Contact me</h2>
                             <p>
                                 If you have an application you're interested in developing,
@@ -337,7 +341,45 @@
                 </section>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="Modalcontainer vanish">
+            <div class="Modalcont">
+                <div class="Modalhead">
+                    <h2 class="Modalh"></h2>
+                    <span class="cross">&times;</span>
+                </div>
+                <div class="Modallang">
+                    <p class="Modalcan"></p>
+                    <ul class="Modallist">
+                        <li class="Modalrole"></li>
+                        <li class="Modalyear"></li>
+                    </ul>
+                </div>
+                <div class="Modalimage"><img src="#" class="ModalImg" alt=""></div>
+                <div class="Modalwp">
+                    <p class="Modalpara">
+                    </p>
+                    <div class="Modalw">
+                        <ul class="ModalWorks">
+
+                        </ul>
+                        <ul class="ModalWorks2">
+                            <li class="tag">Github</li>
+                            <li class="tag">Ruby</li>
+                            <li class="tag">Bootstrap</li>
+                        </ul>
+
+                        <div class="Modalbuttons">
+                            <button class="Modalbtn1">See live <img src="./images/Vector.svg" alt=""></button>
+                            <button class="Modalbtn1">See sources <img src="./images/Icon.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="./JSfiles/app.js"></script>
+    <script src="./JSfiles/Modal.js"></script>
 </body>
 
 </html>

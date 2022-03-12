@@ -8,6 +8,8 @@ const ModalWorks = document.querySelector('.ModalWorks');
 const Modalcan = document.querySelector('.Modalcan');
 const viewBtn = document.querySelectorAll('.prj-view-btn');
 const cross = document.querySelector('.cross');
+const cardCover = document.querySelector('.cardCover');
+
 
 const Arrayprojects = [
   {
@@ -56,9 +58,47 @@ const Arrayprojects = [
   },
 ];
 
-function createModal() {
+(() => {
+  cardCover.innerHTML = '';
+  for (let i = 0; i < Arrayprojects.length; i += 1) {
+    let worklist = '';
+    for (let j = 0; j < Arrayprojects[i].tags.length; j += 1) {
+      worklist = `${worklist}<li class="tag">${Arrayprojects[i].tags[j]}</li>`;
+    }
+    cardCover.innerHTML = `${cardCover.innerHTML}
+    <section class="GridCard3">
+    <section class="GridWrapper3">
+        <section class="second-section3">
+            <div>
+                <img src="${Arrayprojects[i].imageLink}" alt="section-eader" class="img1">
+            </div>
+            <div class="sub-section3">
+                <h2 class="mobile-ton">${Arrayprojects[i].title}</h2>               
+                    <ul class="to-do3">                       
+                        <li class="canopy">${Arrayprojects[i].company}</li>
+                        
+                        <li class="back-end">${Arrayprojects[i].role}</li>
+                        
+                        <li class="year">${Arrayprojects[i].year}</li>
+                    </ul>
+                <p class="to-do-para3">${Arrayprojects[i].description}
+                </p>
+                <div class="works">
+                    <ul>
+                     ${worklist}
+                    </ul>
+                </div>
+                <div class="click24">
+                    <button class="prj-view-btn">See Projects</button>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>`;
+  }
+  const viewBtn = document.querySelectorAll('.prj-view-btn');
   for (let i = 0; i < viewBtn.length; i += 1) {
-    const event = function event() {
+    viewBtn[i].addEventListener('click', (event) => {
       Modalh.innerHTML = Arrayprojects[i].title;
       Modalrole.innerHTML = Arrayprojects[i].role;
       Modalyear.innerHTML = Arrayprojects[i].year;
@@ -70,13 +110,11 @@ function createModal() {
         ModalWorks.innerHTML = `${ModalWorks.innerHTML}<li class="tag">${Arrayprojects[i].tags[j]}</li>`;
       }
       Modalcontainer.classList.toggle('vanish');
-    };
-    viewBtn[i].addEventListener('click', (event));
+    });
   }
-}
-createModal();
+})();
 
 function close() {
   Modalcontainer.classList.toggle('vanish');
 }
-cross.addEventListener('click', close);
+  cross.addEventListener('click', close);

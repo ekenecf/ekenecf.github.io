@@ -421,7 +421,8 @@ button {
 /* This is the third part */
 
 .GridCard3 {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto;
   justify-content: center;
   align-items: center;
 }
@@ -436,7 +437,6 @@ button {
   border-radius: 16px;
   padding-inline: 16px;
   width: 327px;
-  height: 596px;
 }
 
 .second-section3 img {
@@ -489,12 +489,17 @@ h2.mob-face {
   display: flex;
   color: #7a869a;
   font-weight: 600;
+  list-style-type: none;
 }
 
 .to-do3 ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+}
+
+li.canopy {
+  margin-inline: 8px;
 }
 
 .to-do3 ul li {
@@ -800,6 +805,29 @@ textarea {
   margin-top: 18px;
 }
 
+input.view {
+  border: 2px solid red;
+}
+
+.soe {
+  display: flex;
+}
+
+p.suc {
+  display: none;
+  margin: 0;
+  width: 30%;
+  padding: 0;
+  color: rgb(151, 240, 18);
+}
+
+p.err {
+  display: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(241, 7, 7);
+}
+
 /* Modal part */
 
 .vanish {
@@ -915,14 +943,6 @@ li.tag {
 .Modalbtn1 {
   border: 1px solid blue;
   width: 100%;
-}
-
-input.view {
-  border: 2px solid red;
-}
-
-textarea.view {
-  border: 2px solid red;
 }
 
 @media screen and (min-width: 992px) {

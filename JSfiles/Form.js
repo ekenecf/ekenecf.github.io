@@ -1,17 +1,10 @@
-function validate(e) {
-  e.preventDefault();
-  const userName = document.getElementById('name');
+function validate() {
   const mail = document.getElementById('mail');
-  const msg = document.getElementById('msg');
-  if (!userName.value) {
-    userName.classList.toggle('view');
-  } else if (!mail.value) {b
-    mail.classList.toggle('view');
-  } else if (!msg.value) {
-    msg.classList.toggle('view');
+  if (mail.value !== mail.toLowerCase()) {
+    mail.classList.toggle('err');
   } else {
-    window.location = './newpage.html';
+    mail.classList.toggle('suc');
   }
 }
-const submit = document.getElementById('submit');
-submit.addEventListener('click', validate);
+const click = document.getElementById('submit');
+click.addEventListener('submit', validate);

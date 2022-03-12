@@ -27,7 +27,7 @@ Node package manager
 
 # Live Demo:
 
-ekenecf.github.io
+[Live Demo Link](https://ekenecf.github.io/Microverse-Portfolio/)
 
 👤 **Author1**
 

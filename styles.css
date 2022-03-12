@@ -21,6 +21,11 @@ html body {
   background: #e5e5e5;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
 .navigation {
   display: flex;
   width: 375px;
@@ -28,20 +33,29 @@ html body {
   justify-content: space-between;
   align-items: center;
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
 }
 
 .nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 20px;
+  padding-top: 20px;
+}
+
+.close {
+  position: absolute;
+  right: 5%;
   display: none;
+  margin-right: 23px;
 }
 
-.toggle {
-  margin-right: 20px;
-}
-
-.menu {
-  border: none;
-  color: #6070ff;
+.close.show {
+  display: block;
+  background: #6070ff;
+  color: white;
+  cursor: pointer;
 }
 
 a {
@@ -58,6 +72,56 @@ a:hover {
   color: green;
 }
 
+li {
+  margin: 15px;
+  margin-left: 0;
+}
+
+.nav-list li {
+  list-style-type: none;
+}
+
+.list a {
+  background-color: #ebebff;
+  padding: 5px 10px;
+  border-radius: 11px;
+  font-size: 12px;
+}
+
+.nav-list li a {
+  width: 100%;
+  color: #fff;
+}
+
+.toggle {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: none;
+  transition-delay: 0.2s;
+  opacity: 0.8;
+  display: none;
+}
+
+.toggle.active {
+  top: 0%;
+  display: flex;
+  height: 128vh;
+  background: #6070ff;
+}
+
+.menu {
+  border: none;
+  color: #6070ff;
+  margin-right: 16%;
+  cursor: pointer;
+}
+
+.menu.hidden {
+  display: none;
+}
+
 .first-section {
   display: flex;
   flex-direction: column;
@@ -65,6 +129,7 @@ a:hover {
   align-items: center;
   width: 375px;
   background: #fff;
+  padding: 10px;
 }
 
 .section2 {
@@ -116,15 +181,9 @@ p.second-paragraph {
   width: 15px;
 }
 
-li {
-  margin: 15px;
-  margin-left: 0;
-}
-
 /* Grid container */
 
 .grid-position {
-  /* background: #000; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -136,8 +195,6 @@ li {
   display: grid;
   width: 100%;
   grid-template-columns: auto;
-
-  /* background: #e5e5e5; */
   row-gap: 114px;
   border-radius: 20px;
   justify-content: center;
@@ -169,6 +226,7 @@ li {
   width: 295px;
   height: 220px;
   margin-top: 16px;
+  padding: 14px;
 }
 
 .second-section img.img2 {
@@ -234,13 +292,6 @@ li {
 .list {
   padding-top: 3px;
   margin: 0 10px 0 0;
-}
-
-.list a {
-  background-color: #ebebff;
-  padding: 5px 10px;
-  border-radius: 11px;
-  font-size: 12px;
 }
 
 .works {
@@ -370,7 +421,8 @@ button {
 /* This is the third part */
 
 .GridCard3 {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto;
   justify-content: center;
   align-items: center;
 }
@@ -385,7 +437,6 @@ button {
   border-radius: 16px;
   padding-inline: 16px;
   width: 327px;
-  height: 596px;
 }
 
 .second-section3 img {
@@ -438,12 +489,17 @@ h2.mob-face {
   display: flex;
   color: #7a869a;
   font-weight: 600;
+  list-style-type: none;
 }
 
 .to-do3 ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+}
+
+li.canopy {
+  margin-inline: 8px;
 }
 
 .to-do3 ul li {
@@ -718,7 +774,6 @@ textarea {
 }
 
 .MyBtn {
-  /* width: 75%; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -748,13 +803,153 @@ textarea {
   font-family: 'poppins', sans-serif;
   font-size: 20px;
   margin-top: 18px;
-
-  /* max-width: 45%; */
-
-  /* text-align: center; */
 }
 
-@media screen and (min-width: 1050px) {
+.soe {
+  display: flex;
+}
+
+p.suc {
+  display: none;
+  margin: 0;
+  width: 30%;
+  padding: 0;
+  color: rgb(151, 240, 18);
+}
+
+p.suc.visible {
+  display: block;
+}
+
+p.err {
+  display: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(241, 7, 7);
+}
+
+p.err.show {
+  display: block;
+}
+
+/* Modal part */
+
+.vanish {
+  display: none;
+}
+
+.Modalcont {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Modalcan {
+  color: #172b4d;
+  font-weight: 600;
+}
+
+.Modalhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding-inline: 15px;
+}
+
+.cross {
+  font-size: 40px;
+  cursor: pointer;
+  color: #67798e;
+}
+
+.Modallang {
+  display: flex;
+  align-items: center;
+  width: 81%;
+  justify-content: flex-start;
+}
+
+.Modallist {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  color: #344563;
+  margin-left: 18px;
+  font-size: 10px;
+}
+
+.Modalpara {
+  color: #344563;
+  margin-top: 15px;
+  padding-right: 22px;
+  padding-inline: 22px;
+}
+
+.ModalWorks {
+  display: flex;
+  list-style-type: none;
+}
+
+.ModalWorks2 {
+  display: none;
+}
+
+li.tag {
+  color: #6070ff;
+  background-color: #ebebff;
+  border-radius: 8px;
+}
+
+.Modalimage {
+  width: 80%;
+}
+
+.Modalwp {
+  width: 90%;
+  margin-bottom: 10%;
+}
+
+.Modalw {
+  margin-left: 20px;
+}
+
+.Modalcontainer {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-inline: 5%;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation-name: ekene;
+  animation-duration: 1s;
+}
+
+@keyframes ekene {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.Modalbuttons {
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.Modalbtn1 {
+  border: 1px solid blue;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
   html body {
     min-width: 368px;
     height: 100%;
@@ -766,13 +961,20 @@ textarea {
     width: 100%;
   }
 
+  .toggle {
+    display: flex;
+  }
+
+  .toggle a {
+    border: none;
+  }
+
   .navigation {
     width: 100%;
     background-color: #fff;
     display: flex;
-    padding-bottom: 10px;
     justify-content: space-between;
-    position: fixed;
+    height: 45px;
   }
 
   .nav-list {
@@ -784,6 +986,18 @@ textarea {
     font-size: 15px;
     color: #344563;
     margin-right: 15px;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-top: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .toggle.active {
+    display: none;
   }
 
   .nav-list li {
@@ -803,9 +1017,8 @@ textarea {
     font-weight: normal;
   }
 
-  .nav-list li:hover {
-    transform: scale(1.5);
-    transition: all 350ms;
+  .list a {
+    margin: 0;
   }
 
   .nav-list a {
@@ -813,9 +1026,38 @@ textarea {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 15px;
+    text-decoration: none;
+  }
+
+  .ruby a {
+    background-color: #ebebff;
+    padding: 5px 10px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
+
+  .ruby2 a {
+    background-color: #ebebff;
+    padding: 5px 10px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
+
+  .nav-list li a {
+    width: 100%;
+    color: #344563;
+  }
+
+  .nav-list li:hover {
+    transform: scale(1.5);
+    transition: all 350ms;
   }
 
   .menu {
+    display: none;
+  }
+
+  .close {
     display: none;
   }
 
@@ -930,10 +1172,6 @@ textarea {
     font-size: 18px;
   }
 
-  .list a {
-    margin: 0;
-  }
-
   .click {
     width: 36%;
   }
@@ -1019,13 +1257,6 @@ textarea {
     margin: 0 10px 0 0;
   }
 
-  .ruby a {
-    background-color: #ebebff;
-    padding: 5px 10px;
-    border-radius: 11px;
-    font-size: 12px;
-  }
-
   .works2 .ruby {
     display: block;
   }
@@ -1076,11 +1307,29 @@ textarea {
   }
 
   .second-section3 img.img1 {
-    display: none;
+    display: block;
+    height: 55vh;
+    width: 100%;
   }
 
   h2.mobile-ton {
-    display: none;
+    display: block;
+  }
+
+  .to-do3 {
+    display: flex;
+  }
+
+  .to-do3 .back-end {
+    display: inline-block;
+  }
+
+  .to-do3 .year {
+    display: inline-block;
+  }
+
+  .to-do3 .canopy {
+    display: inline-block;
   }
 
   h2.mob-face {
@@ -1089,22 +1338,15 @@ textarea {
 
   .click24 {
     width: 25%;
-    background: #4053fc;
     border-radius: 5px;
     font-family: "poppins", sans-serif;
     font-size: 20px;
     text-align: center;
   }
 
-  button {
+  .prj-view-btn {
     background-color: white;
     color: #6070ff;
-  }
-
-  .works ul {
-    display: flex;
-    list-style-type: none;
-    margin-bottom: 40px;
   }
 
   .ruby2 {
@@ -1120,13 +1362,6 @@ textarea {
     display: block;
     font-size: 18px;
     font-weight: normal;
-  }
-
-  .ruby2 a {
-    background-color: #ebebff;
-    padding: 5px 10px;
-    border-radius: 11px;
-    font-size: 12px;
   }
 
   img.cursor1 {
@@ -1305,5 +1540,57 @@ textarea {
   .click52:hover {
     transform: scale(1.5);
     transition: all 350ms;
+  }
+
+  .Modalhead {
+    width: 83%;
+    margin: 0;
+  }
+
+  .Modalh {
+    font-size: 35px;
+  }
+
+  .cross {
+    font-size: 50px;
+  }
+
+  .Modallist {
+    width: 30%;
+    font-size: 16px;
+  }
+
+  .ModalImg {
+    width: 100%;
+  }
+
+  .Modallang {
+    width: 79%;
+  }
+
+  .Modalpara {
+    width: 55%;
+    margin-left: 25px;
+  }
+
+  .Modalwp {
+    display: flex;
+  }
+
+  .Modalbuttons {
+    width: 100%;
+  }
+
+  .Modalbtn1 {
+    width: 100%;
+  }
+
+  .Modalw {
+    width: 35%;
+  }
+
+  .ModalWorks2 {
+    display: flex;
+    list-style-type: none;
   }
 }

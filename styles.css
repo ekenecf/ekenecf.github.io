@@ -829,7 +829,7 @@ p.err {
 }
 
 p.err.show {
-  display: block;
+  display: contents;
 }
 
 /* Modal part */

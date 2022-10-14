@@ -8,6 +8,7 @@ const ModalWorks = document.querySelector('.ModalWorks');
 const Modalcan = document.querySelector('.Modalcan');
 const cross = document.querySelector('.cross');
 const cardCover = document.querySelector('.cardCover');
+// const Modalbtn1 = document.querySelector('.Modalbtn1');
 
 const Arrayprojects = [
   {
@@ -19,7 +20,7 @@ const Arrayprojects = [
     company: 'CANOPY',
     year: '2015',
     sourceLink: '',
-    demoLink: '',
+    demoLink: 'https://micro-hotel-reservation.netlify.app/',
   },
   {
     title: 'Mulit-Post Stories',
@@ -103,6 +104,7 @@ const Arrayprojects = [
       Modalpara.innerHTML = Arrayprojects[i].description;
       ModalImg.src = Arrayprojects[i].imageLink;
       Modalcan.innerHTML = Arrayprojects[i].company;
+      // Modalbtn1.innerHTML = Arrayprojects[i].demoLink
       ModalWorks.innerHTML = '';
       for (let j = 0; j < Arrayprojects[i].tags.length; j += 1) {
         ModalWorks.innerHTML = `${ModalWorks.innerHTML}<li class="tag">${Arrayprojects[i].tags[j]}</li>`;
